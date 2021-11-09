@@ -1,0 +1,27 @@
+.banner {
+  background: #333;
+  color: #fff;
+  padding: 60px 0px;
+}
+.carousel-item img {
+  height: 600px;
+}
+.carousel-indicators {
+  display: none;
+}
+.banner-content button {
+  background: #f9bc2f;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 18px;
+}
+.banner-content h4 span {
+  color: #f9bc2f;
+  font-size: 40px;
+}
+@media screen and (min-device-width: 250px) and (max-device-width: 768px) {
+  .carousel-item img {
+    height: 300px;
+  }
+}

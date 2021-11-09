@@ -1,0 +1,54 @@
+.me-auto {
+  margin-left: auto;
+}
+a.navbar-brand {
+  width: 150px;
+}
+.header {
+  background: #333;
+  padding: 20px 0px;
+}
+.me-auto.navbar-nav a:hover {
+  color: #f9bc2f;
+}
+.navbar-nav a {
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  margin: 0px 10px;
+}
+.navbar-nav li {
+  color: #f9bc2f;
+  font-size: 20px;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+.navbar-nav button {
+  background: #f9bc2f;
+  border: none;
+  margin-left: 10px;
+  width: 130px;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.ls-btn {
+  background: rgb(35, 109, 247);
+  padding: 10px;
+  color: #2c2c2c;
+  font-weight: 600;
+  letter-spacing: 2px;
+  width: 100px;
+  text-align: center;
+  border-radius: 10px;
+}
+@media screen and (min-device-width: 250px) and (max-device-width: 768px) {
+  .navbar-nav .ls-btn {
+    margin-top: 15px;
+    padding: 5px 0px;
+  }
+  .navbar-nav button {
+    margin-top: 15px;
+  }
+}

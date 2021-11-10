@@ -13,7 +13,7 @@ const HomeWatches = () => {
     },[])
 
     return (
-        <Container>
+        <Container id='HomeWatches'>
             <Row>
                 {
                     homeWatches.map(watch => <SingleHomeWatch key={watch._id} watch={watch}></SingleHomeWatch>)

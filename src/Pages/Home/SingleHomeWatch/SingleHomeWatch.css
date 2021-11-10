@@ -1,0 +1,16 @@
+.watchDetails {
+  background: #333333;
+  color: #fff;
+  height: 460px;
+  margin: 20px;
+  text-align: center;
+  font-family: "Fira Sans", sans-serif;
+}
+.watchDetails img {
+  width: 55%;
+  margin: 10px 0px;
+}
+.watchDetails h3 {
+  font-size: 22px;
+  margin: 20px 0px;
+}

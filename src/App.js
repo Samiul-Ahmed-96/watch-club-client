@@ -1,15 +1,18 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
+import AuthProvider from './Context/AuthProvider';
 import DetailsAndBooking from './Pages/DetailsAndBooking/DetailsAndBooking';
 import Home from './Pages/Home/Home/Home';
 import Login from './Pages/Login/Login/Login';
+import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import NotFound from './Pages/NotFound/NotFound';
 import Register from './Pages/Register/Register';
 import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
 function App() {
   return (
+  <AuthProvider>
     <BrowserRouter>
     <Header/>
     <Switch>
@@ -19,21 +22,22 @@ function App() {
       <Route path="/home">
           <Home/>
       </Route>
-      <Route path="/detailsAndBooking/:id">
-          <DetailsAndBooking/>
+      <Route path="/login">
+          <Login/>
       </Route>
       <Route path="/register">
           <Register/>
       </Route>
-      <Route path="/login">
-          <Login/>
-      </Route>
+      <PrivateRoute path="/detailsAndBooking/:id">
+          <DetailsAndBooking/>
+      </PrivateRoute>
       <Route path="*">
         <NotFound/>
       </Route>
     </Switch>
     <Footer/>
    </BrowserRouter>
+  </AuthProvider>
   );
 }
 

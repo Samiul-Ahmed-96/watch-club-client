@@ -1,28 +1,78 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import useFirebase from '../../../Hooks/useFirebase';
+import { useHistory, useLocation } from 'react-router';
+import useAuth from '../../../Hooks/useAuth';
+
 
 const Login = () => {
-    const {error,handleEmail,handlePassword,handleLogin,handleResetPassword,signInUsingGoogle} = useFirebase();
+
+    const {signInUsingGoogle,setUser ,loginViaEmailAndPassword, setIsLoading} = useAuth();
+
+    const history= useHistory()
+    const location = useLocation()
+
+    const url= location.state?.from || "/home"
+
+    const [email , setEmail]= useState("")
+    const [password , setPassword] = useState("")
+
+
+    const handleGetEmail = (e) =>{
+    setEmail(e.target.value);
+    }
+
+    const handleGetPassword = (e)=> {
+        setPassword(e.target.value);
+    }
+   
+    const handleLoginWithEmailAndPassword=(e)=>{
+        e.preventDefault();
+        loginViaEmailAndPassword(email,password)
+        .then((res) => {
+          setIsLoading(true)
+            setUser(res.user);
+            history.push(url)
+            // ...
+          })
+          .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+          })
+          .finally(() => {
+            setIsLoading(false)
+          })
+    }
+
+    const handleGoogleLogin = () => {
+        signInUsingGoogle()
+          .then((res) => 
+            {
+              setIsLoading(true)
+              setUser(res.user)
+              history.push(url)
+            }
+              )
+          .catch((err) => console.log(err))
+          .finally(() => {
+            setIsLoading(false)
+          })
+      };
+
     return (
         <Container>
-            <h2 className="my-5">Please Login</h2>
-            <Row className="align-items-center">
-                <Col md={6} sm={12}>
-                    <form onSubmit={handleLogin}>
-                        <div className="form-item">
-                            <img className="w-25" src='' alt="" />
-                            <input onBlur={handleEmail} type="email" placeholder="Email" />
-                            <input onBlur={handlePassword} type="password" placeholder="Password" />
-                            <h3>{error}</h3>
-                            <input type="submit" value="Login" />
-                            <button onClick={signInUsingGoogle}><i class="fab fa-google"></i> Sign In Using Google</button>
-                            <button onClick={handleResetPassword}>Forget Password</button>
-                        </div>
+            <Row>
+                <Col lg={6} md={6} sm={12} xm={12}>
+                    <div className="login-form">
+                    <form onSubmit={handleLoginWithEmailAndPassword}>
+                    <input type="email" onBlur={handleGetEmail} placeholder="Email"/>
+                    <br/>
+                    <input type="password" onBlur={handleGetPassword} placeholder="Password"/>
+                    <br/>
+                    <br/>
+                    <input type="submit" value ="login"/>
                     </form>
-                </Col>
-                <Col md={6} sm={12}>
-                    <img className="w-100 p-5" src='' alt="" />
+                    <button onClick={handleGoogleLogin}>Google Login</button>
+                    </div>
                 </Col>
             </Row>
         </Container>

@@ -2,6 +2,7 @@
   background: #333;
   color: #fff;
   padding: 60px 0px;
+  font-family: "Fira Sans", sans-serif;
 }
 .carousel-item img {
   height: 600px;
@@ -22,6 +23,6 @@
 }
 @media screen and (min-device-width: 250px) and (max-device-width: 768px) {
   .carousel-item img {
-    height: 300px;
+    height: 350px;
   }
 }

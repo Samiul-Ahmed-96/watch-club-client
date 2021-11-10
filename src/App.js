@@ -5,6 +5,7 @@ import DetailsAndBooking from './Pages/DetailsAndBooking/DetailsAndBooking';
 import Home from './Pages/Home/Home/Home';
 import Login from './Pages/Login/Login/Login';
 import NotFound from './Pages/NotFound/NotFound';
+import Register from './Pages/Register/Register';
 import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
 function App() {
@@ -20,6 +21,9 @@ function App() {
       </Route>
       <Route path="/detailsAndBooking/:id">
           <DetailsAndBooking/>
+      </Route>
+      <Route path="/register">
+          <Register/>
       </Route>
       <Route path="/login">
           <Login/>

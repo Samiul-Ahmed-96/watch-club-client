@@ -2,10 +2,12 @@ import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
+import useFirebase from '../../../Hooks/useFirebase';
 import logo from '../../../Images/Logo.png';
 import './Header.css';
 
 const Header = () => {
+    const {user,handleSignOut} = useFirebase();
     return (
         <Navbar sticky="top" className="header"  collapseOnSelect expand="lg" >
         <Container>
@@ -17,9 +19,11 @@ const Header = () => {
             <HashLink to="/home#HomeWatches">Watches</HashLink>
         </Nav>
         <Nav>
-            <li>User</li>
-            <button>Sign out <i class="fas fa-sign-out-alt"></i></button>   
-            <Link className='ls-btn' to="/login">Login</Link>
+        <li>{user?.displayName}</li>
+        {user.email ? 
+        <button onClick={handleSignOut}>Sign out <i class="fas fa-sign-out-alt"></i></button>   
+        : <Link className='ls-btn' to="/login">Login</Link>}   
+            <Link className='ls-btn' to="/register">Register</Link>
         </Nav>
         </Navbar.Collapse>
         </Container>

@@ -68,25 +68,33 @@ const Register = () => {
 
     return (
         <Container>
-        <Row>
-            <Col lg={6} md={6} sm={12} xm={12}>
-                <div className="sign-in-form">
-                <form onSubmit={handleRegister}>
-                    <input type="text"  onBlur={getNameValue}placeholder="name"/>
-                    <br/>
-                    <input type="email" onBlur={getEmailValue} placeholder="email"/>
-                    <br/>
-                    <input type="password"  onBlur={getPasswordValue} placeholder="password"/>
-                    <br/>
-                    <input type="submit" placeholder="create"/>
-                    <br/>
-                </form>
-                <button onClick={handleGoogleSignIn}>google</button>
-                </div>
-            </Col>
-        </Row>
+        <div className="sectionHeading">
+        <h2>Register <span>Here</span></h2>
+        </div>
+        <Row className="align-items-center gy-3">
+                <Col lg={6} md={6} sm={12} xm={12}>
+                    <div className="login-content">
+                    <img className='w-25 text-center my-3' src="https://i.ibb.co/vDjf20S/add-user.png" alt="" />
+                    <div className="login-form">
+                    <form onSubmit={handleRegister}>
+                    <input type="text"  onBlur={getNameValue} required placeholder="Name"/>
+                    <input type="email" onBlur={getEmailValue} required placeholder="Email"/>
+                    <input type="password"  onBlur={getPasswordValue} required placeholder="Password"/>
+                    <input type="submit" value="Register" placeholder="create"/>
+                    </form>
+                    </div>
+                    </div>
+                </Col>
+                <Col className="text-center" lg={6} md={6} sm={12} xm={12}>
+                    <img className="w-75 rounded-3" src="https://i.ibb.co/n1G0z9r/pexels-the-th-179908.jpg" alt="" />
+                </Col>
+            </Row>
     </Container>
     );
 };
 
 export default Register;
+
+
+
+

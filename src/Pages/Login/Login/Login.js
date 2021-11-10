@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { useHistory, useLocation } from 'react-router';
 import useAuth from '../../../Hooks/useAuth';
+import './Login.css';
 
 
 const Login = () => {
@@ -60,20 +61,27 @@ const Login = () => {
 
     return (
         <Container>
-            <Row>
+        <div className="sectionHeading">
+        <h2>Login <span>Here</span></h2>
+        </div>
+            <Row className="align-items-center gy-3">
                 <Col lg={6} md={6} sm={12} xm={12}>
-                    <div className="login-form">
-                    <form onSubmit={handleLoginWithEmailAndPassword}>
-                    <input type="email" onBlur={handleGetEmail} placeholder="Email"/>
-                    <br/>
-                    <input type="password" onBlur={handleGetPassword} placeholder="Password"/>
-                    <br/>
-                    <br/>
-                    <input type="submit" value ="login"/>
-                    </form>
-                    <button onClick={handleGoogleLogin}>Google Login</button>
-                    </div>
+                    <img className="w-75 rounded-3" src="https://i.ibb.co/Wxqh5C2/pexels-ari-alqadri-1151440.jpg" alt="" />
                 </Col>
+
+                <Col lg={6} md={6} sm={12} xm={12}>
+                <div className="login-content">
+                <img className='w-25 text-center my-3' src="https://i.ibb.co/WsdcZYp/login-1.png" alt="" />
+                <div className="login-form">
+                <form onSubmit={handleLoginWithEmailAndPassword}>
+                    <input type="email" onBlur={handleGetEmail} required placeholder="Email"/>
+                    <input type="password" onBlur={handleGetPassword} required placeholder="Password"/>
+                    <input type="submit" value ="Login"/>
+                </form>
+                    <button onClick={handleGoogleLogin}>Google Login</button>
+                </div>
+                </div>
+            </Col>
             </Row>
         </Container>
     );

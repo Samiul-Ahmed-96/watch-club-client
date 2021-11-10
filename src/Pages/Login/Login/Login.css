@@ -1,0 +1,40 @@
+.login-form input {
+  width: 75%;
+  margin: 5px auto;
+  height: 40px;
+  padding: 0px 20px;
+}
+.login-form {
+  background: #333333;
+  text-align: center;
+  padding: 50px 0px;
+  border-radius: 5px;
+  font-family: "Fira Sans", sans-serif;
+}
+.login-content {
+  border: 2px solid #333333;
+  padding: 20px;
+  border-radius: 5px;
+}
+.login-form button {
+  background: rgb(35, 109, 247);
+  padding: 10px;
+  color: #2c2c2c;
+  font-weight: 600;
+  border-radius: 5px;
+  color: #fff;
+  border: none;
+  margin: 5px 0px;
+  width: 30%;
+}
+.login-form input:last-child {
+  background: rgb(35, 109, 247);
+  padding: 10px;
+  color: #2c2c2c;
+  font-weight: 600;
+  border-radius: 5px;
+  color: #fff;
+  border: none;
+  margin: 5px 0px;
+  width: 30%;
+}

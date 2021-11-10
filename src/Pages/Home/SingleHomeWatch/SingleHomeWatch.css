@@ -1,16 +1,36 @@
 .watchDetails {
   background: #333333;
   color: #fff;
-  height: 460px;
   margin: 20px;
   text-align: center;
+  padding: 10px;
   font-family: "Fira Sans", sans-serif;
+  border-radius: 5px;
 }
 .watchDetails img {
-  width: 55%;
-  margin: 10px 0px;
+  width: 65%;
+  margin: 20px 0px;
 }
 .watchDetails h3 {
   font-size: 22px;
-  margin: 20px 0px;
+  margin: 10px 0px;
+}
+.singleImg {
+  width: 300px;
+  height: 300px;
+  background: #fff;
+  margin: 20px auto;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.watchDetails button {
+  background: #f9bc2f;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 18px;
+  margin: 15px 0px;
+  font-weight: 600;
 }

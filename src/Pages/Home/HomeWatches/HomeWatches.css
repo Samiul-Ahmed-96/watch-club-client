@@ -1,0 +1,17 @@
+.sectionHeading h2 {
+  font-weight: 700;
+  font-size: 50px;
+  color: #333333;
+}
+
+.sectionHeading h2 span {
+  color: #f9bc2f;
+  background: #333333;
+  padding: 10px 30px;
+  border-radius: 5px;
+}
+.sectionHeading {
+  padding: 20px;
+  margin: 30px 0px;
+  font-family: "Fira Sans", sans-serif;
+}

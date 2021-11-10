@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { useParams } from 'react-router';
+import './DetailsAndBooking.css';
 
 const DetailsAndBooking = () => {
     //Get the ID 
@@ -18,8 +19,10 @@ const DetailsAndBooking = () => {
             <Row>
                 <Col lg={6} md={6} sm={12} xs={12}>
                     <div className="Booking-watch">
-                        <img src={singleWatch.img} alt="" />
-                        <h2>{singleWatch.name}</h2>
+                        <img src={singleWatch?.img} alt="" />
+                        <h2>{singleWatch?.name}</h2>
+                        <p>{singleWatch?.description}</p>
+                        <h1>$ {singleWatch.price}</h1>
                     </div>
                 </Col>
             </Row>

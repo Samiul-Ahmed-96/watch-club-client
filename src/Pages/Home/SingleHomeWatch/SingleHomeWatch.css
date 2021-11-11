@@ -28,9 +28,9 @@
 .watchDetails button {
   background: #f9bc2f;
   border: none;
-  border-radius: 5px;
   padding: 10px 20px;
   font-size: 18px;
   margin: 15px 0px;
   font-weight: 600;
+  clip-path: polygon(5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
 }

@@ -3,6 +3,8 @@
   color: #fff;
   padding: 60px 0px;
   font-family: "Fira Sans", sans-serif;
+  clip-path: polygon(50% 100%, 100% 85%, 100% 0, 0 0, 0 85%);
+  overflow: hidden;
 }
 .carousel-item img {
   height: 600px;

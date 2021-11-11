@@ -17,6 +17,7 @@ const Header = () => {
         <Nav className="me-auto">
             <Link to="/home">Home</Link>
             <HashLink to="/home#HomeWatches">Watches</HashLink>
+            <HashLink to="/home#HomeFeatures">Features</HashLink>
         </Nav>
         <Nav>
         <li>{user?.displayName}</li>

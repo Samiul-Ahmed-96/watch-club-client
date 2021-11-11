@@ -1,0 +1,14 @@
+.error-message {
+  text-align: center;
+  background: #f9bc2f;
+  margin: 100px 0px;
+  padding: 100px 0px;
+  font-family: "Titillium Web", sans-serif;
+  color: #333333;
+  border-radius: 5px;
+}
+
+.error-message h1 {
+  font-size: 60px;
+  font-weight: 600;
+}

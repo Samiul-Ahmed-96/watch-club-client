@@ -27,3 +27,9 @@
   font-size: 20px;
   margin: 20px;
 }
+.second-heading h3 {
+  font-weight: 700;
+  font-size: 50px;
+  color: #333333;
+  margin: 20px 0px;
+}

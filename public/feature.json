@@ -1,0 +1,21 @@
+[
+  {
+    "id": 1,
+    "type": "SIRUS COMMAND",
+    "detail": "To start a workout, get directions, or check your schedule just ask and it lets you do the things you do every day easily",
+    "img": "https://i.ibb.co/82qKMv7/1.png"
+  },
+
+  {
+    "id": 2,
+    "type": "EXERCISES TRACKER",
+    "detail": "Get detailed measurements & a sense of accomplishment and when you close your Move, Exercise, and Stand rings.",
+    "img": "https://i.ibb.co/cYJ7yNq/2.png"
+  },
+  {
+    "type": "SLEEP TIMER",
+    "id": 3,
+    "detail": "Sleep Timer lets you fall asleep to your favorite music. You simply start your music, and then set the countdown timer",
+    "img": "https://i.ibb.co/s5V1pd0/3.png"
+  }
+]

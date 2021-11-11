@@ -1,0 +1,27 @@
+.feature-container {
+  font-family: "Titillium Web", sans-serif;
+  margin-top: 30px;
+}
+.second-heading h3 span {
+  color: #f9bc2f;
+
+  padding: 10px 30px;
+  border-radius: 5px;
+  font-family: "Titillium Web", sans-serif;
+}
+.second-heading h2 {
+  font-size: 24px;
+  color: #333333;
+  font-family: "Titillium Web", sans-serif;
+  margin-top: 30px;
+}
+.feature-details {
+  text-align: center;
+  background: #f9bc2f;
+  border-radius: 5px;
+  padding: 20px;
+  clip-path: polygon(5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
+}
+.feature-details h4 {
+  font-weight: 600;
+}

@@ -38,3 +38,10 @@
   margin: 5px 0px;
   width: 30%;
 }
+.login-form a {
+  display: block;
+  margin: 10px 0px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #f9bc2f;
+}

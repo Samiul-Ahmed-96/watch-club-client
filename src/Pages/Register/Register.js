@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { useHistory, useLocation } from 'react-router';
+import { Link } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 
 const Register = () => {
 
-    const {signInUsingGoogle,setUser,setIsLoading,setError,handleSignUp,getUserName} = useAuth();
+    const {setUser,setIsLoading,handleSignUp,getUserName} = useAuth();
 
     const [name , setName] =useState('')
     const [email,setEmail]=useState('')
@@ -53,18 +54,7 @@ const Register = () => {
           })
     }
 
-    const handleGoogleSignIn = () =>{
-        signInUsingGoogle()
-        .then(res => {
-            setIsLoading(true)
-            setUser(res.user)
-            history.push(url)
-        })
-        .catch(err => setError(err))
-        .finally(()=>{
-            setIsLoading(false)
-        })
-    }
+
 
     return (
         <Container>
@@ -80,9 +70,12 @@ const Register = () => {
                     <input type="text"  onBlur={getNameValue} required placeholder="Name"/>
                     <input type="email" onBlur={getEmailValue} required placeholder="Email"/>
                     <input type="password"  onBlur={getPasswordValue} required placeholder="Password"/>
+                    <Link to='/login'>Already Sign in?</Link>
                     <input type="submit" value="Register" placeholder="create"/>
+                    
                     </form>
                     </div>
+                    
                     </div>
                 </Col>
                 <Col className="text-center" lg={6} md={6} sm={12} xm={12}>

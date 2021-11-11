@@ -10,3 +10,29 @@
   padding: 30px 0px;
   text-align: center;
 }
+
+form.order-form input {
+  width: 75%;
+  margin: 5px auto;
+  height: 40px;
+  padding: 0px 20px;
+}
+
+form.order-form {
+  background: #333333;
+  text-align: center;
+  padding: 50px 0px;
+  font-family: "Fira Sans", sans-serif;
+  border-radius: 5px;
+}
+form.order-form input:last-child {
+  background: rgb(35, 109, 247);
+  padding: 10px;
+  color: #2c2c2c;
+  font-weight: 600;
+  border-radius: 5px;
+  color: #fff;
+  border: none;
+  margin: 5px 0px;
+  width: 30%;
+}

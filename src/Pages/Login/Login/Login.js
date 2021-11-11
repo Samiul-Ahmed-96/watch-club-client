@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { useHistory, useLocation } from 'react-router';
+import { Link } from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth';
 import './Login.css';
 
@@ -77,8 +78,10 @@ const Login = () => {
                     <input type="email" onBlur={handleGetEmail} required placeholder="Email"/>
                     <input type="password" onBlur={handleGetPassword} required placeholder="Password"/>
                     <input type="submit" value ="Login"/>
+                    
                 </form>
                     <button onClick={handleGoogleLogin}>Google Login</button>
+                    <Link to='/register'>New User?</Link>
                 </div>
                 </div>
             </Col>

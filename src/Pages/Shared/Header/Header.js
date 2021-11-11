@@ -23,7 +23,9 @@ const Header = () => {
         {user.email ? 
         <button onClick={handleSignOut}>Sign out <i class="fas fa-sign-out-alt"></i></button>   
         : <Link className='ls-btn' to="/login">Login</Link>}   
-            <Link className='ls-btn' to="/register">Register</Link>
+            {
+                !user.email && <Link className='ls-btn' to="/register">Register</Link>
+            }
         </Nav>
         </Navbar.Collapse>
         </Container>

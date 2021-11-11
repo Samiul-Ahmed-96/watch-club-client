@@ -10,6 +10,7 @@ import NotFound from './Pages/NotFound/NotFound';
 import Register from './Pages/Register/Register';
 import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
+import Watches from './Pages/Watches/Watches/Watches';
 function App() {
   return (
   <AuthProvider>
@@ -24,6 +25,9 @@ function App() {
       </Route>
       <Route path="/login">
           <Login/>
+      </Route>
+      <Route path="/watches">
+          <Watches/>
       </Route>
       <Route path="/register">
           <Register/>

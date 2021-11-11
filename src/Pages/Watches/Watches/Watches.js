@@ -1,19 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import SingleHomeWatch from '../SingleHomeWatch/SingleHomeWatch';
-import './HomeWatches.css';
+import SingleWatches from '../SingleWatches/SingleWatches';
 
-const HomeWatches = () => {
-
-    const [homeWatches ,setHomeWatches] = useState([]);
+const Watches = () => {
+    const [watches ,setWatches] = useState([]);
 
     useEffect(()=>{
         fetch('http://localhost:5000/watchItems')
         .then(res => res.json())
-        .then(data => setHomeWatches(data))
+        .then(data => setWatches(data))
     },[])
-
     return (
         <Container id='HomeWatches'>
             <div className="sectionHeading">
@@ -21,13 +18,12 @@ const HomeWatches = () => {
             </div>
             <Row>
                 {
-                    homeWatches.slice(0,6).map(watch => <SingleHomeWatch key={watch._id} watch={watch}></SingleHomeWatch>)
+                    watches.map(watch => <SingleWatches key={watch._id} watch={watch}></SingleWatches>)
                 }
             </Row>
-
-            <Link to='/watches'><button className='Common-btn'>More Watches</button></Link>
+            <Link to='/'><button className='Common-btn'>Back to Home</button></Link>
         </Container>
     );
 };
 
-export default HomeWatches;
+export default Watches;

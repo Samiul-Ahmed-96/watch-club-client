@@ -17,9 +17,8 @@ const Dashboard = () => {
                 <Col md={3} xs={12} sm={12}>
                     <div className="dashboard-link">
                         <ul>
-                            <li><Link to={`${url}`}>Dashboard</Link></li>
-                            <li><Link to={`${url}/pay`}>Pay</Link></li>
                             <li><Link to={`${url}/MyOrders`}>My Orders</Link></li>
+                            <li><Link to={`${url}/pay`}>Pay</Link></li>
                             <li><Link to={`${url}/review`}>Review</Link></li>
                             <button onClick={handleSignOut}>Logout</button>
                         </ul>

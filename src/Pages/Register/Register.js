@@ -42,7 +42,7 @@ const Register = () => {
           setIsLoading(true)
           getUserName(name)
             setUser(res.user)
-            savedUser(email,name)
+            savedUser(email,name,"POST")
             history.push(url)
           })
           .catch((error) => {

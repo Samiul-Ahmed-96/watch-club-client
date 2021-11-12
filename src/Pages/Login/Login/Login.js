@@ -8,7 +8,7 @@ import './Login.css';
 
 const Login = () => {
 
-    const {signInUsingGoogle,setUser ,loginViaEmailAndPassword, setIsLoading} = useAuth();
+    const {signInUsingGoogle,setUser ,loginViaEmailAndPassword, setIsLoading,savedUser} = useAuth();
 
     const history= useHistory()
     const location = useLocation()
@@ -51,6 +51,7 @@ const Login = () => {
             {
               setIsLoading(true)
               setUser(res.user)
+              savedUser(res.user.email,res.user.displayName,"PUT")
               history.push(url)
             }
               )

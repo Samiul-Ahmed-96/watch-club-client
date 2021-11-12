@@ -49,10 +49,10 @@ const useFirebase = () => {
         .finally(()=>setIsLoading(false))
     }
         //Save User
-        const savedUser = (email,name) =>{
+        const savedUser = (email,name,method) =>{
             const user = {email : email , displayName : name}
             fetch('http://localhost:5000/users',{
-                method : "POST",
+                method : method,
                 headers : {
                     'content-type' : 'application/json'
                 },

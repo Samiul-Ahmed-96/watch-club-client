@@ -22,6 +22,7 @@ const Admin = () => {
                 if (data.modifiedCount) {
                     console.log(data);
                     alert('Successfully Added Admin')
+                    setEmail('');
                 }
             })
 

@@ -1,0 +1,32 @@
+.dashboard-title h1 {
+  background: #f9bc2f;
+  text-align: center;
+  padding: 30px;
+  color: #333333;
+  margin-bottom: 35px;
+  font-weight: 600;
+  clip-path: polygon(50% 100%, 100% 30%, 100% 0, 0 0, 0 30%);
+}
+.dashboard-container {
+  font-family: "Fira Sans", sans-serif;
+}
+.dashboard-link {
+  background-color: #333;
+  padding: 30px 0px;
+}
+.dashboard-link-main a {
+  color: #fff;
+  text-decoration: none;
+}
+.dashboard-link ul li {
+  list-style: none;
+  margin: 30px 0px;
+}
+.dashboard-link ul button {
+  background: #f9bc2f;
+  border: none;
+  width: 130px;
+  font-weight: 600;
+  border-radius: 5px;
+  padding: 10px;
+}

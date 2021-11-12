@@ -1,0 +1,17 @@
+form.admin-main input {
+  width: 50%;
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+}
+form.admin-main input:last-child {
+  width: 25%;
+  background: rgb(35, 109, 247);
+  padding: 10px;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-align: center;
+  border-radius: 5px;
+  border: none;
+}

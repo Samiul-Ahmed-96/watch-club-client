@@ -8,7 +8,7 @@ const MyOrders = () => {
     const [userOrders, setUserOrders] = useState([])
 
     useEffect(()=>{
-        const url = `http://localhost:5000/orders?email=${user.email}`;
+        const url = `http://localhost:5000/orders`;
         fetch(url)
         .then(res=> res.json())
         .then(data=> setUserOrders(data))
@@ -34,30 +34,32 @@ const MyOrders = () => {
         }
         
     }
-
+    const result = userOrders.filter(order => order.email === user.email);
     return (
         <div className="user-orders">
         
-        <Table striped bordered hover>
-            <thead>
-            <tr>
-                <th>Watch Name</th>
-                <th>Your Name</th>
-                <th>Price</th>
-                <th>Action</th>
-            </tr>
-            </thead>
-            <tbody>
-                {
-                    userOrders.map(order => <tr>
-                        <td>{order.watchName}</td>
-                        <td>{order.name}</td>
-                        <td>{order.singleWatchPrice}</td>
-                        <td><button onClick={()=>handleDelete(order._id)}>Cancel <i class="fas fa-trash-alt"></i></button></td>
-                    </tr>)
-                }
-            </tbody>
-        </Table>
+        <Table className='text-center' striped bordered hover>
+        <thead>
+        <tr>
+            <th className="w-25">Product Image</th>
+            <th>Product Name</th>
+            <th>Order By</th>
+            <th>Price</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+            {
+                result.map(order => <tr>
+                    <td><img className='order-img' src={order.image} alt="" /></td>
+                    <td>{order.watchName}</td>
+                    <td>{order.name}</td>
+                    <td>{order.singleWatchPrice}</td>
+                    <td><button className="delete-btn" onClick={()=>handleDelete(order._id)}>Cancel <i class="fas fa-trash-alt"></i></button></td>
+                </tr>)
+            }
+        </tbody>
+    </Table>
         
         </div>
     );

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Admin.css';
 
 const Admin = () => {
     const [email,setEmail] = useState('');
@@ -30,10 +31,10 @@ const Admin = () => {
     }
 
     return (
-       <div>
-            <h2>Make An Admin</h2>
-            <form onSubmit={makeAdmin}>
-                <input onBlur={handleGetEmail} type="email" placeholder="email"/>
+       <div className="text-center">
+       <h2 className="mb-3 fw-bold">Make A Admin</h2>
+            <form className='admin-main' onSubmit={makeAdmin}>
+                <input onBlur={handleGetEmail} type="email" placeholder="Email"/>
                 <input type="submit" value="Make Admin" />
             </form>
        </div>

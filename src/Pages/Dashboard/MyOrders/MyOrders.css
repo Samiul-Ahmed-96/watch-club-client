@@ -1,3 +1,18 @@
 .user-orders {
   font-family: "Fira Sans", sans-serif;
 }
+.order-img {
+  width: 100px;
+}
+button.delete-btn {
+  background: red;
+  border: none;
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+@media screen and (min-device-width: 250px) and (max-device-width: 768px) {
+  .order-img {
+    width: 50px;
+  }
+}

@@ -24,6 +24,7 @@ const AddAProduct = () => {
     };
     return (
         <div className="add-from">
+        <h2 className="mb-3 fw-bold text-white">Add A Product</h2>
                         
                         <form onSubmit={handleSubmit(onSubmit)}>
                         <input placeholder="Product Name" {...register("name",{ required: true })} />

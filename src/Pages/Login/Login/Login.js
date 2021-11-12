@@ -9,11 +9,10 @@ import './Login.css';
 const Login = () => {
 
     const {signInUsingGoogle,setUser ,loginViaEmailAndPassword, setIsLoading,savedUser} = useAuth();
-
     const history= useHistory()
     const location = useLocation()
 
-    const url= location.state?.from || "/home"
+    const url= location.state?.from || "/home" ;
 
     const [email , setEmail]= useState("")
     const [password , setPassword] = useState("")

@@ -58,6 +58,7 @@ const DetailsAndBooking = () => {
                     <input value={singleWatch?.name} {...register("watchName" ,{ required: true })} />
                     <input defaultValue={singleWatch.price} {...register("singleWatchPrice" ,{ required: true })} />
                     <input value={singleWatch._id} {...register("watchId" ,{ required: true })} />
+                    <input value={singleWatch.img} {...register("image" ,{ required: true })} />
                     <input placeholder="Phone" defaultValue="" {...register("phone",{ required: true })} />
                     <input placeholder="Address" defaultValue="" {...register("address",{ required: true })} />
                     <input className="form-btn" type="submit" value="Order Now" />

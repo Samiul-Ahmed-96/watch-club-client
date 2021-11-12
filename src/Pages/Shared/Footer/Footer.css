@@ -1,0 +1,59 @@
+.about-us h4 {
+  font-size: 14px;
+  margin: 15px 0px;
+  font-weight: 400;
+}
+
+.footer {
+  background: #2c2c2c;
+  color: #fff;
+  padding: 30px 0px;
+  margin-top: 60px;
+  font-family: "Fira Sans", sans-serif;
+}
+
+.about-us ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 10px;
+}
+
+.about-us ul li i {
+  background: #f9bc2f;
+  color: #333;
+  padding: 8px;
+  font-weight: 600;
+}
+
+.links ul {
+  margin: 35px 0px;
+}
+
+.links ul li {
+  list-style: none;
+  margin: 10px -30px;
+}
+
+.links ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.links ul li a:hover {
+  color: #f9bc2f;
+}
+.contact {
+  display: flex;
+  align-items: center;
+}
+
+.contact i {
+  background: #f9bc2f;
+  color: #333;
+  padding: 8px;
+}
+
+.contact-item {
+  margin-left: 10px;
+  margin-top: 10px;
+}

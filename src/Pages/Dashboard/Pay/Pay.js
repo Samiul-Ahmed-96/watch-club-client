@@ -3,7 +3,7 @@ import React from 'react';
 const Pay = () => {
     return (
         <div>
-            <h2>Pay</h2>
+            <h2>Payment is comming soon</h2>
         </div>
     );
 };

@@ -6,6 +6,7 @@ import {
 import useAuth from '../../../Hooks/useAuth';
 import MyOrders from '../MyOrders/MyOrders';
 import Pay from '../Pay/Pay';
+import Review from '../Review/Review';
 
 const Dashboard = () => {
     const {handleSignOut} = useAuth();
@@ -24,14 +25,20 @@ const Dashboard = () => {
                         </ul>
                     </div>
                 </Col>
-                <Col md={3} xs={12} sm={12}>
+                <Col md={9} xs={12} sm={12}>
                 <Switch>
-                <Route exact path={path}>
-                    <MyOrders/>
-                </Route>
-                <Route path={`${path}/pay`}>
-                    <Pay/>
-                </Route>
+                    <Route exact path={path}>
+                        <MyOrders/>
+                    </Route>
+                    <Route path={`${path}/pay`}>
+                        <Pay/>
+                    </Route>
+                    <Route path={`${path}/myOrders`}>
+                        <MyOrders/>
+                    </Route>
+                    <Route path={`${path}/review`}>
+                        <Review/>
+                    </Route>
                 </Switch>
                 </Col>
             </Row>

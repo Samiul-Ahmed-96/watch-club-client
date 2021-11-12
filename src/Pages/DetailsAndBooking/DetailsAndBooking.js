@@ -20,7 +20,23 @@ const DetailsAndBooking = () => {
 
      const { register, handleSubmit,formState: { errors } } = useForm();
      const onSubmit = data => {
+         
          console.log(data);
+         fetch('http://localhost:5000/orders',{
+
+            method : "POST",
+            headers : {
+                'content-type' : 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        .then(res => res.json())
+        .then(result => {
+            console.log(result)
+            alert('Order Successfully')
+            
+        })
+
      };
     return (
         <Container>
@@ -41,7 +57,7 @@ const DetailsAndBooking = () => {
                     <input value="pending" {...register("status",{ required: true })} />
                     <input value={singleWatch?.name} {...register("watchName" ,{ required: true })} />
                     <input defaultValue={singleWatch.price} {...register("singleWatchPrice" ,{ required: true })} />
-                    <input defaultValue={singleWatch._id} {...register("watchId" ,{ required: true })} />
+                    <input value={singleWatch._id} {...register("watchId" ,{ required: true })} />
                     <input placeholder="Phone" defaultValue="" {...register("phone",{ required: true })} />
                     <input placeholder="Address" defaultValue="" {...register("address",{ required: true })} />
                     <input className="form-btn" type="submit" value="Order Now" />

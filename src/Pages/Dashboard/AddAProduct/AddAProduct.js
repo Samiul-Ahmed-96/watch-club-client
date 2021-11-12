@@ -1,10 +1,39 @@
 import React from 'react';
+import { useForm } from 'react-hook-form';
+import './AddProduct.css';
 
 const AddAProduct = () => {
+    const { register, handleSubmit } = useForm();
+     //Handle Submit
+     const onSubmit = data => {
+
+        fetch('http://localhost:5000/watchItems',{
+
+            method : "POST",
+            headers : {
+                'content-type' : 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        .then(res => res.json())
+        .then(result => {
+            console.log(result)
+            alert('Added Successfully')
+            
+        })
+    };
     return (
-        <div>
-            <h2>Add A Product</h2>
-        </div>
+        <div className="add-from">
+                        
+                        <form onSubmit={handleSubmit(onSubmit)}>
+                        <input placeholder="Product Name" {...register("name",{ required: true })} />
+                        <input placeholder="Image Link" {...register("img",{ required: true })} />
+                        <textarea placeholder="Description" {...register("description",{ required: true })} />
+                        <input placeholder="Price" {...register("price",{ required: true })} />
+                        <input placeholder="rating" {...register("rating",{ required: true })} />
+                        <input type="submit" value="Add Product"/>
+                        </form>
+                        </div>
     );
 };
 

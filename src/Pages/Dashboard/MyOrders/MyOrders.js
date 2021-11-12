@@ -37,7 +37,7 @@ const MyOrders = () => {
     const result = userOrders.filter(order => order.email === user.email);
     return (
         <div className="user-orders">
-        
+        <h2 className="mb-3 fw-bold">My Orders</h2>
         <Table className='text-center' striped bordered hover>
         <thead>
         <tr>

@@ -21,7 +21,7 @@ const Dashboard = () => {
             <div className="dashboard-title">
                 <h1>Dashboard</h1>
             </div>
-            <Row>
+            <Row >
                 <Col className="dashboard-link-main" md={3} xs={12} sm={12}>
                     <div className="dashboard-link">
                        
@@ -42,7 +42,7 @@ const Dashboard = () => {
                         }
                     </div>
                 </Col>
-                <Col md={9} xs={12} sm={12}>
+                <Col className="my-3" md={9} xs={12} sm={12}>
                 {admin ? 
                     <Switch> 
                         <Route exact path={path}>

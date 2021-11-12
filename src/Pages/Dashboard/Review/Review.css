@@ -1,0 +1,38 @@
+form.give-review input {
+  display: block;
+  width: 50%;
+  margin: 5px auto;
+  padding: 10px 20px;
+}
+form.give-review input:last-child {
+  background: rgb(35, 109, 247);
+  padding: 10px;
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-align: center;
+  border-radius: 5px;
+  border: none;
+  font-size: 18px;
+  margin: 20px auto;
+  width: 200px;
+}
+form.give-review textarea {
+  width: 50%;
+  display: block;
+  margin: 5px auto;
+  padding: 10px 20px;
+}
+
+form.give-review select {
+  width: 50%;
+  margin: 5px auto;
+  padding: 10px 20px;
+}
+form.give-review {
+  text-align: center;
+  background: #333;
+  color: #fff;
+  padding: 30px;
+  margin: 5px 0px;
+}

@@ -48,6 +48,18 @@ const useFirebase = () => {
         })
         .finally(()=>setIsLoading(false))
     }
+        //Save User
+        const savedUser = (email,name) =>{
+            const user = {email : email , displayName : name}
+            fetch('http://localhost:5000/users',{
+                method : "POST",
+                headers : {
+                    'content-type' : 'application/json'
+                },
+                body : JSON.stringify(user)
+            })
+            .then()
+        }
     //observer
     useEffect(()=>{
         const unsubscribed = onAuthStateChanged(auth,user =>{
@@ -71,6 +83,7 @@ const useFirebase = () => {
         setError,
         signInUsingGoogle,
         handleSignUp,
+        savedUser,
         getUserName,
         loginViaEmailAndPassword,
         handleSignOut

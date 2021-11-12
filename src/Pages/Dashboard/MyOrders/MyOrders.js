@@ -53,7 +53,7 @@ const MyOrders = () => {
                         <td>{order.watchName}</td>
                         <td>{order.name}</td>
                         <td>{order.singleWatchPrice}</td>
-                        <td><button onClick={()=>handleDelete(order._id)}>Cancel</button></td>
+                        <td><button onClick={()=>handleDelete(order._id)}>Cancel <i class="fas fa-trash-alt"></i></button></td>
                     </tr>)
                 }
             </tbody>

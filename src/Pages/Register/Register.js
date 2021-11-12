@@ -6,7 +6,7 @@ import useAuth from '../../Hooks/useAuth';
 
 const Register = () => {
 
-    const {setUser,setIsLoading,handleSignUp,getUserName} = useAuth();
+    const {setUser,setIsLoading,handleSignUp,getUserName,savedUser} = useAuth();
 
     const [name , setName] =useState('')
     const [email,setEmail]=useState('')
@@ -42,12 +42,12 @@ const Register = () => {
           setIsLoading(true)
           getUserName(name)
             setUser(res.user)
+            savedUser(email,name)
             history.push(url)
           })
           .catch((error) => {
             const errorCode = error.code;
             const errorMessage = error.message;
-            // ..
           })
           .finally(()=> {
             setIsLoading(false)

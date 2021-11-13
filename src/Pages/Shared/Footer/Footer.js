@@ -2,9 +2,11 @@ import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
+import useAuth from '../../../Hooks/useAuth';
 import logo from '../../../Images/Logo.png';
 import './Footer.css';
 const Footer = () => {
+    const {user} = useAuth();
     return (
         <div className="footer">
         <Container>
@@ -53,7 +55,9 @@ const Footer = () => {
                         <ul>
                           <li><Link to="/home">Home</Link></li>
                           <li><HashLink to="/home#HomeWatches">Watches</HashLink></li>
-                          <li><Link to="/dashboard">Dashboard</Link></li>
+                          <li><HashLink to="/home#HomeFeatures">Features</HashLink></li>
+                          <li><HashLink to="/home#homeReviews">Reviews</HashLink></li>
+                          {user.email && <li><Link to="/dashboard">Dashboard</Link></li>}
                         </ul>
                     </div>
                 </Col>

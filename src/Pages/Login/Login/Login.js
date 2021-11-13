@@ -33,6 +33,7 @@ const Login = () => {
         .then((res) => {
           setIsLoading(true)
             setUser(res.user);
+            alert('Login Successfully');
             setSuccess('Login Successfully');
             history.push(url)
             // ...

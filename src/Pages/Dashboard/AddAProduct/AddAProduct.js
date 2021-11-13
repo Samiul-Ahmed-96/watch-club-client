@@ -7,7 +7,7 @@ const AddAProduct = () => {
      //Handle Submit
      const onSubmit = data => {
 
-        fetch('http://localhost:5000/watchItems',{
+        fetch('https://radiant-bayou-77332.herokuapp.com/watchItems',{
 
             method : "POST",
             headers : {

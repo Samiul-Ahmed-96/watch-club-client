@@ -52,7 +52,7 @@ const useFirebase = () => {
         //Save User
         const savedUser = (email,name,method) =>{
             const user = {email : email , displayName : name}
-            fetch('http://localhost:5000/users',{
+            fetch('https://radiant-bayou-77332.herokuapp.com/users',{
                 method : method,
                 headers : {
                     'content-type' : 'application/json'
@@ -63,7 +63,7 @@ const useFirebase = () => {
         }
     //Check Admin
     useEffect(()=>{
-        fetch(`http://localhost:5000/users/${user.email}`)
+        fetch(`https://radiant-bayou-77332.herokuapp.com/users/${user.email}`)
         .then(res => res.json())
         .then(data => setAdmin(data.admin))
     },[user.email])

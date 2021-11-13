@@ -28,7 +28,7 @@ const Footer = () => {
                         <i class="fas fa-phone-alt"></i>
                         <div className="contact-item">
                             <h6>+01777-1222122</h6>
-                            <h6>+01888-1999122</h6>
+                            <h6>+01888-199922</h6>
                         </div>
                         </div>
                         <div className="contact">

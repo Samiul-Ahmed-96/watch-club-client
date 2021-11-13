@@ -15,7 +15,7 @@ const DetailsAndBooking = () => {
 
      //Data load
      useEffect(()=>{
-         fetch(`http://localhost:5000/watchItems/${id}`)
+         fetch(`https://radiant-bayou-77332.herokuapp.com/watchItems/${id}`)
          .then(res => res.json())
          .then(data => setSingleWatch(data))
      },[])
@@ -24,7 +24,7 @@ const DetailsAndBooking = () => {
      const onSubmit = data => {
          
          console.log(data);
-         fetch('http://localhost:5000/orders',{
+         fetch('https://radiant-bayou-77332.herokuapp.com/orders',{
 
             method : "POST",
             headers : {

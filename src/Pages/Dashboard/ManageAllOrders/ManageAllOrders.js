@@ -5,7 +5,7 @@ const ManageAllOrders = () => {
     const [allOrders,setAllOrders] = useState([]);
 
     useEffect(()=>{
-        const url = `http://localhost:5000/orders`;
+        const url = `https://radiant-bayou-77332.herokuapp.com/orders`;
         fetch(url)
         .then(res=> res.json())
         .then(data=> setAllOrders(data))
@@ -15,7 +15,7 @@ const ManageAllOrders = () => {
     const handleDelete = (id ) =>{
         const deleteConfirm = window.confirm("Want to delete?");
         if (deleteConfirm) {
-            const url = `http://localhost:5000/orders/${id}`;
+            const url = `https://radiant-bayou-77332.herokuapp.com/orders/${id}`;
             fetch(url,{
                 method : 'DELETE'
             })

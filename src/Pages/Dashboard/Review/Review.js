@@ -6,7 +6,24 @@ import './Review.css';
 const Review = () => {
     const {user} = useAuth();
     const { register, handleSubmit } = useForm();
-    const onSubmit = data => console.log(data);
+     //Handle Submit
+     const onSubmit = data => {
+
+        fetch('http://localhost:5000/reviews',{
+
+            method : "POST",
+            headers : {
+                'content-type' : 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        .then(res => res.json())
+        .then(result => {
+            console.log(result)
+            alert('Reviews Added Successfully')
+            
+        })
+    };
     return (
         <div>
             

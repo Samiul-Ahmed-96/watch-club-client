@@ -1,0 +1,17 @@
+.review-details {
+  text-align: center;
+  background: #f9bc2f;
+  border-radius: 5px;
+  padding: 20px;
+  clip-path: polygon(5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
+}
+.reviews-container {
+  font-family: "Titillium Web", sans-serif;
+}
+.review-details h2 {
+  margin: 10px 0px;
+  font-weight: 600;
+}
+.review-details p {
+  margin: 10px 0px;
+}

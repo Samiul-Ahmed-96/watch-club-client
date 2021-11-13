@@ -18,6 +18,7 @@ const Header = () => {
             <Link to="/home">Home</Link>
             <HashLink to="/home#HomeWatches">Watches</HashLink>
             <HashLink to="/home#HomeFeatures">Features</HashLink>
+            <HashLink to="/home#homeReviews">Reviews</HashLink>
             {
                 user.email && <Link to="/dashboard">Dashboard</Link>
             }

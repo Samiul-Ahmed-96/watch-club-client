@@ -5,7 +5,6 @@
   text-align: center;
   padding: 10px;
   font-family: "Fira Sans", sans-serif;
-  border-radius: 5px;
 }
 .watchDetails img {
   width: 65%;
@@ -22,7 +21,7 @@
   margin: 20px auto;
   margin-top: 20px;
   padding: 10px;
-  border-radius: 5px;
+  clip-path: polygon(5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
   overflow: hidden;
 }
 .watchDetails button {

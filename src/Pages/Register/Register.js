@@ -5,21 +5,22 @@ import { Link } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 
 const Register = () => {
-
-    const {setUser,setIsLoading,handleSignUp,getUserName,savedUser} = useAuth();
-
+    //From hooks
+    const {setUser,setIsLoading,handleSignUp,getUserName,savedUser,handleSignOut} = useAuth();
+    //States
     const [name , setName] =useState('')
     const [email,setEmail]=useState('')
     const [password,setPassword]=useState('')
+    const [success,setSuccess] = useState('');
 
 
     
     const history= useHistory()
     const location = useLocation()
 
-    const url= location.state?.from || "/home"
+    const url= location.state?.from || "/login"
 
-
+    //Handler
     const getNameValue=(e)=> {
         console.log(e.target.value);
     setName(e.target.value)
@@ -42,6 +43,8 @@ const Register = () => {
           setIsLoading(true)
           getUserName(name)
             setUser(res.user)
+            setSuccess('Registration Successfully')
+            handleSignOut();
             savedUser(email,name,"POST")
             history.push(url)
           })
@@ -75,7 +78,7 @@ const Register = () => {
                     
                     </form>
                     </div>
-                    
+                    <h4 className="text-white">{success}</h4>
                     </div>
                 </Col>
                 <Col className="text-center" lg={6} md={6} sm={12} xm={12}>

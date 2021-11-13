@@ -11,6 +11,8 @@ const DetailsAndBooking = () => {
     const {id} = useParams();
      //State
      const [singleWatch,setSingleWatch] = useState({})
+     const [success,setSuccess] = useState('');
+
      //Data load
      useEffect(()=>{
          fetch(`http://localhost:5000/watchItems/${id}`)
@@ -33,7 +35,7 @@ const DetailsAndBooking = () => {
         .then(res => res.json())
         .then(result => {
             console.log(result)
-            alert('Order Successfully')
+            setSuccess('Order Successfully')
             
         })
 
@@ -50,6 +52,7 @@ const DetailsAndBooking = () => {
                     </div>
                 </Col>
                 <Col md={6} sm={12} xs={12}>
+                <h4>{success}</h4>
                 <form className="order-form" onSubmit={handleSubmit(onSubmit)}>
                     <input defaultValue={user?.displayName} {...register("name")} />
                     <input defaultValue={user?.email} {...register("email", { required: true })} />

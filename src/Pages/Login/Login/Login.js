@@ -16,6 +16,7 @@ const Login = () => {
 
     const [email , setEmail]= useState("")
     const [password , setPassword] = useState("")
+    const [success,setSuccess] = useState('');
 
 
     const handleGetEmail = (e) =>{
@@ -32,6 +33,7 @@ const Login = () => {
         .then((res) => {
           setIsLoading(true)
             setUser(res.user);
+            setSuccess('Login Successfully');
             history.push(url)
             // ...
           })
@@ -82,6 +84,7 @@ const Login = () => {
                 </form>
                     <button onClick={handleGoogleLogin}>Google Login</button>
                     <Link to='/register'>New User?</Link>
+                    <h4>{success}</h4>
                 </div>
                 </div>
             </Col>

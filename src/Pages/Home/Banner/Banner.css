@@ -1,13 +1,14 @@
 .banner {
   background: #333;
   color: #fff;
-  padding: 60px 0px;
+  padding: 100px 0px;
   font-family: "Fira Sans", sans-serif;
+  -webkit-clip-path: polygon(50% 100%, 100% 85%, 100% 0, 0 0, 0 85%);
   clip-path: polygon(50% 100%, 100% 85%, 100% 0, 0 0, 0 85%);
   overflow: hidden;
 }
 .carousel-item img {
-  height: 600px;
+  height: 410px;
 }
 .carousel-indicators {
   display: none;

@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import './AddProduct.css';
 
 const AddAProduct = () => {
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit,reset } = useForm();
      //Handle Submit
      const onSubmit = data => {
 
@@ -19,6 +19,7 @@ const AddAProduct = () => {
         .then(result => {
             console.log(result)
             alert('Added Successfully')
+            reset();
             
         })
     };

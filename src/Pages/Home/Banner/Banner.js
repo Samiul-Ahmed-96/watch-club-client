@@ -24,21 +24,21 @@ const Banner = () => {
                             <Carousel.Item>
                             <img
                                 className="d-block w-100"
-                                src="https://i.ibb.co/g98FdYp/8-2-watch-free-download-png.png"
+                                src="https://i.ibb.co/jvZ9Pc0/Png-Item-1341378.png"
                                 alt="First slide"
                             />
                             </Carousel.Item>
                             <Carousel.Item>
                             <img
                                 className="d-block w-100"
-                                src="https://i.ibb.co/t363jgf/22656-5-rolex-watch-transparent.png"
+                                src="https://i.ibb.co/ZNkDxFt/Png-Item-1157218.png"
                                 alt="Second slide"
                             />
                             </Carousel.Item>
                             <Carousel.Item>
                             <img
                                 className="d-block w-100"
-                                src="https://i.ibb.co/3ksWHQp/3-2-watch-png-clipart.png"
+                                src="https://i.ibb.co/jr9NdRg/watch-png-25023-1.png"
                                 alt="Third slide"
                             />
                             </Carousel.Item>

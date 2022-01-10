@@ -15,29 +15,34 @@ npm start . then you will see the project start on your browser
 ## Features
 
 
-- Order System
+- Users booking products
+- Users manage his own products
 - Give Reviews by Users
 - Making admin via Admin
-- Manage orders via Admin
-- Product added and manage via Admin
+- Manage all orders via Admin
+- All the services manage via Admin
+- All the service update via Admin
+- Admin can added new item
 - Google Sign In
-- Authentication System
+- login & Registration System
 
 ## Author
 
 - [https://github.com/Samiul-Ahmed-96](https://github.com/Samiul-Ahmed-96)
 
   
-## Technology
+## Tools & Technology
 - React 
-- React Rating
 - React Bootstrap
 - React hook form 
 - React Router dom
+- Firebase
 - Express js
 - Node js
 - MongoDB
 - Css
+- Heroku
+- Netlify
 
 
 
